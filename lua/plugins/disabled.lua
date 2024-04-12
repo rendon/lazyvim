@@ -4,4 +4,5 @@ return {
   { "flash.nvim", enabled = false },
   { "dashboard-nvim", enabled = false },
   { "mini.pairs", enabled = false },
+  { "friendly-snippets", enabled = false },
 }
