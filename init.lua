@@ -12,6 +12,7 @@ vim.b.autoformat = false
 -- " Enable AutoSave on Vim startup
 vim.g.auto_save = 1
 
+vim.g.go_fmt_autosave = 0
 
 vim.wo.relativenumber = true
 vim.opt.tabstop = 4
