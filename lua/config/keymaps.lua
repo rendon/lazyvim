@@ -20,3 +20,9 @@ vim.keymap.set(
   "n", "<C-P>", "<leader><leader>",
   { remap = true, desc = "Find files" }
 )
+
+
+vim.keymap.set(
+  "n", "<leader>j", "o<esc>k",
+  { remap = true, desc = "Add empty line below current position" }
+)
