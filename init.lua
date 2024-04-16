@@ -19,3 +19,8 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
+
+require('telekasten').setup({
+  home = vim.fn.expand("~/projects/notes/"), -- Put the name of your notes directory here
+  template_new_note = vim.fn.expand("~/projects/notes/.new-note-template"), -- Put the name of your notes directory here
+})
