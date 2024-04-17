@@ -2,8 +2,12 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 vim.keymap.set(
-  "n", "<C-Q>", ":q<cr>",
+  "n", "<c-q>", ":q<cr>",
   { remap = true, desc = "Quit the current window" }
+)
+vim.keymap.set(
+  "n", "<c-x>", "<leader>bd",
+  { remap = true, desc = "Delete current buffer" }
 )
 
 vim.keymap.set(
@@ -52,4 +56,4 @@ vim.keymap.set("n", "<leader>zb", "<cmd>Telekasten show_backlinks<CR>")
 vim.keymap.set("n", "<leader>zI", "<cmd>Telekasten insert_img_link<CR>")
 
 -- Call insert link automatically when we start typing a link
-vim.keymap.set("i", "[[", "<cmd>Telekasten insert_link<CR>")
+-- vim.keymap.set("i", "[[", "<cmd>Telekasten insert_link<CR>")
