@@ -7,7 +7,7 @@ vim.keymap.set(
 )
 vim.keymap.set(
   "n", "<c-x>", "<leader>bd",
-  { remap = true, desc = "Delete current buffer" }
+  { remap = true, desc = "Close current buffer" }
 )
 
 vim.keymap.set(
@@ -21,10 +21,14 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
-  "n", "<C-P>", "<leader><leader>",
+  "n", "<c-p>", "<leader><leader>",
   { remap = true, desc = "Find files" }
 )
 
+vim.keymap.set(
+  "n", "<leader>d", ":GoDecls<cr>",
+  { remap = true, desc = "Show all function and type declarations" }
+)
 
 vim.keymap.set(
   "n", "<leader>j", "o<esc>k",
