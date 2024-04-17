@@ -1,8 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-require("lspconfig").marksman.setup({})
-require('lspconfig').pyright.setup({})
  -- globally
 vim.g.autoformat = false
  -- buffer-local
@@ -24,3 +22,6 @@ require('telekasten').setup({
   home = vim.fn.expand("~/projects/notes/"), -- Put the name of your notes directory here
   template_new_note = vim.fn.expand("~/projects/notes/.new-note-template"), -- Put the name of your notes directory here
 })
+
+require("lspconfig").marksman.setup({})
+require('lspconfig').pyright.setup({})
