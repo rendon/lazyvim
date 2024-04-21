@@ -2,7 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 vim.keymap.set(
-  "n", "<c-q>", ":q<cr>",
+  "n", "<c-q>", ":q!<cr>",
   { remap = true, desc = "Quit the current window" }
 )
 vim.keymap.set(
