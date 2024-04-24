@@ -31,8 +31,18 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
-  "n", "<leader>j", "o<esc>k",
+  "n", "<leader>j", "o<esc>Dk",
   { remap = true, desc = "Add empty line below current position" }
+)
+
+vim.keymap.set(
+  "n", '<leader>"', 'yi"',
+  { remap = true, desc = "Copy text in double quotes" }
+)
+
+vim.keymap.set(
+  "n", "<leader>'", "yi'",
+  { remap = true, desc = "Copy text in single quotes" }
 )
 
 vim.keymap.set(

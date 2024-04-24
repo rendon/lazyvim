@@ -2,22 +2,39 @@
 require("config.lazy")
 
 require('telekasten').setup({
-  home = vim.fn.expand("~/projects/notes/"), -- Put the name of your notes directory here
-  template_new_note = vim.fn.expand("~/projects/notes/.new-note-template"), -- Put the name of your notes directory here
+  -- Put the name of your notes directory here
+  home = vim.fn.expand("~/projects/notes/"),
+  -- Put the name of your notes directory here
+  template_new_note = vim.fn.expand("~/projects/notes/.new-note-template"),
 })
 
 require("lspconfig").marksman.setup({})
 require('lspconfig').pyright.setup({})
 
+-- Delay autocompletion
+-- https://github.com/hrsh7th/nvim-cmp/issues/715#issuecomment-1806944224
+local timer = nil
+vim.api.nvim_create_autocmd({ "TextChangedI", "CmdlineChanged" }, {
+  pattern = "*",
+  callback = function()
+    if timer then
+      vim.loop.timer_stop(timer)
+      timer = nil
+    end
+
+    timer = vim.loop.new_timer()
+    timer:start(1000, 0, vim.schedule_wrap(function()
+      require('cmp').complete({ reason = require('cmp').ContextReason.Auto })
+    end))
+  end
+})
+
+
  -- globally
 vim.g.autoformat = false
- -- buffer-local
-vim.b.autoformat = false
-
 
 -- " Enable AutoSave on Vim startup
 vim.g.auto_save = 1
-
 
 vim.wo.relativenumber = true
 vim.opt.tabstop = 4
