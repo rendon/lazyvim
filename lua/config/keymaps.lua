@@ -46,13 +46,13 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
-  "i", "<c-k>", "<esc>vbUea",
-  { remap = true, desc = "Convert last word to caps" }
+  "n", "<leader>(", "yi(",
+  { remap = true, desc = "Copy text in parentheses" }
 )
 
 vim.keymap.set(
-  "i", "<c-c>", "```<cr>```<c-o>O",
-  { remap = true, desc = "Insert Markdown code block" }
+  "n", "<c-f>", "lxh",
+  { remap = true, desc = "Copy text in single quotes" }
 )
 
 vim.keymap.set(
@@ -71,4 +71,15 @@ vim.keymap.set("n", "<leader>zd", "<cmd>Telekasten goto_today<cr>")
 vim.keymap.set("n", "<leader>zz", "<cmd>Telekasten follow_link<cr>")
 vim.keymap.set("n", "<leader>zc", "<cmd>Telekasten show_calendar<cr>")
 vim.keymap.set("n", "<leader>zb", "<cmd>Telekasten show_backlinks<cr>")
-vim.keymap.set("n", "<leader>zI", "<cmd>Telekasten insert_img_link<cr>")
+vim.keymap.set("n", "<leader>zi", "<cmd>Telekasten insert_link<cr>")
+
+-- Insertion mode mappings
+vim.keymap.set(
+  "i", "<c-k>", "<esc>vbUea",
+  { remap = true, desc = "Convert last word to caps" }
+)
+
+vim.keymap.set(
+  "i", "<c-c>", "```<cr>```<c-o>O",
+  { remap = true, desc = "Insert Markdown code block" }
+)
