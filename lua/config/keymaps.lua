@@ -83,3 +83,13 @@ vim.keymap.set(
   "i", "<c-c>", "```<cr>```<c-o>O",
   { remap = true, desc = "Insert Markdown code block" }
 )
+
+vim.keymap.set(
+  "i", "<c-q>", "<esc>:q!<cr>",
+  { remap = true, desc = "Delete the next word" }
+)
+
+vim.keymap.set(
+  "i", "<c-e>", "<c-o>ce",
+  { remap = true, desc = "Delete the next word" }
+)
