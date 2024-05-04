@@ -4,7 +4,6 @@ return {
   event = "VeryLazy",
   opts = {
     mappings = {
-      ["`"] = false,
       ["\""] = false,
       ["'"] = false,
       ["("] = false,
