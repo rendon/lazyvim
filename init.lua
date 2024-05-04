@@ -45,3 +45,8 @@ vim.opt.expandtab = true
 -- Autoformatting is annoying, I'll call the formatter when I'm ready
 vim.g.go_fmt_autosave = 0
 vim.g.go_imports_autosave = 0
+
+
+if vim.g.neovide then
+    vim.o.guifont = "monospace:h18"
+end
